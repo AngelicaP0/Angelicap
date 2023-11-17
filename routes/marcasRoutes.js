@@ -1,0 +1,10 @@
+const express = require('express');
+const marcasControllers = require('../controllers/marcasControllers');
+const router = express.Router();
+router.get("/", marcasControllers.listarMarcas);
+router.get("/:id", marcasControllers.listarMarcasId);
+router.post("/", marcasControllers.agregarMarca);
+router.put("/:id", marcasControllers.actualizarMarca);
+router.delete("/:id", marcasControllers.eliminarMarca);
+router.get('/', marcasControllers.listarMarcas);
+module.exports = router; 
